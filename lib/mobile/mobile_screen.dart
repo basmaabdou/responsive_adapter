@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive/adaptive/adaptive_indicator.dart';
+import 'package:responsive/constants.dart';
 
 class MobileScreen extends StatelessWidget {
   const MobileScreen({super.key});
@@ -75,7 +78,15 @@ class MobileScreen extends StatelessWidget {
                         ),
                       ),
                     ],
-                  )
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                    Center(
+                       child:AdaptiveIndicator(
+                         os: getOs(),
+                       ),
+                   ),
                 ],
               ),
             ),
